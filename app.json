@@ -1,29 +1,53 @@
 {
   "expo": {
-    "name": "billy-app",
-    "slug": "billy-app",
-    "version": "1.0.0",
+    "name": "appbilly",
+    "slug": "appbilly",
+    "version": "3.0.5",
+    "scheme": "com.wepet.appbilly",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
-    "newArchEnabled": true,
     "splash": {
       "image": "./assets/splash-icon.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#33CCCC"
     },
+    "assetBundlePatterns": ["**/*"],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.petcrowdsas.appbilly",
+      "buildNumber": "1.0.5",
+      "usesAppleSignIn": true,
+      "config": {},
+      "infoPlist": {
+        "CFBundleAllowMixedLocalizations": true
+      }
     },
     "android": {
+      "package": "com.petcrowdsas.appbilly",
+      "versionCode": 115,
+      "permissions": [],
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
-      },
-      "edgeToEdgeEnabled": true
+        "backgroundColor": "#33CCCC"
+      }
     },
     "web": {
-      "favicon": "./assets/favicon.png"
+      "favicon": "./assets/favicon.png",
+      "bundler": "metro"
+    },
+    "plugins": [
+      "expo-router",
+      "@react-native-google-signin/google-signin",
+      "expo-font"
+    ],
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "a491fb8b-c79e-4cc6-bf2e-be49777e4806"
+      }
     }
   }
 }
