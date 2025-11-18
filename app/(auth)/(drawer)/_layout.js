@@ -33,17 +33,6 @@ function CustomDrawerContent({ navigation }) {
         />
       </Pressable>
       <View style={{ paddingHorizontal: 15 }}>
-        <Text
-          style={{
-            color: Colors.colorTurquesa,
-            fontFamily: "Montserrat_700Bold",
-            fontSize: 16,
-            textAlign: "center",
-            marginBottom: 30,
-          }}
-        >
-          ¡Hola!
-        </Text>
         <Pressable
           style={{
             alignItems: "center",
@@ -76,6 +65,10 @@ function CustomDrawerContent({ navigation }) {
             {actualUser.name}
           </Text>
         </Pressable>
+         <Pressable onPress={()=>    router.push("/home")}>
+             <Text style={styles.text}>Inicio</Text>
+         </Pressable>
+        <Separator />
       </View>
       <View style={{ flex: 1, justifyContent: "flex-end" }}>
         <WButon

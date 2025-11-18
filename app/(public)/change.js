@@ -82,7 +82,6 @@ const change = () => {
     setLoading(true);
     try {
       const response = await dispatch(UserActions.fetchUserLogin(formValues));
-      console.log(response);
       if (response) {
         router.push("/home");
       }
